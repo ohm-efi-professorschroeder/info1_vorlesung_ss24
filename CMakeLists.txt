@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 project(info1_vorlesung_ss2024 C)
 
 set(CMAKE_C_STANDARD 11)
-add_compile_options(-Wall)
+add_compile_options(-Wall -Wextra)
 
 add_executable(00_helloworld termin_00/hello.c)
 
@@ -21,3 +21,10 @@ add_executable(02_04-anteile termin_02/04_anteile.c)
 add_executable(02_05-alphabet termin_02/05_alphabet.c)
 add_executable(02_06-rechner termin_02/06_rechner.c)
 add_executable(02_07-zahlenVergleich termin_02/07_zahlenVergleich.c)
+
+add_executable(03_01-castingLesen termin_03/01_castingLesen.c)
+add_executable(03_02-explizitesCasting termin_03/02_explizitesCasting.c)
+add_executable(03_03-verkehrsteilnehmer termin_03/03_verkehrsteilnehmer.c)
+add_executable(03_04-taschenrechner.c termin_03/04_taschenrechner.c)
+add_executable(03_05-bedingteBewertung.c termin_03/05_bedingteBewertung.c)
+add_executable(03_06-ifElseGrab.c termin_03/06_ifElseGrab.c)
