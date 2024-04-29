@@ -28,3 +28,8 @@ add_executable(03_03-verkehrsteilnehmer termin_03/03_verkehrsteilnehmer.c)
 add_executable(03_04-taschenrechner.c termin_03/04_taschenrechner.c)
 add_executable(03_05-bedingteBewertung.c termin_03/05_bedingteBewertung.c)
 add_executable(03_06-ifElseGrab.c termin_03/06_ifElseGrab.c)
+
+add_executable(04_01-eingabePruefung termin_04/01_eingabePruefung.c)
+add_executable(04_02-binaerUmrechnungSchleife termin_04/02_binaerUmrechnungSchleife.c)
+add_executable(04_03-asciiTabelle termin_04/03_asciiTabelle.c)
+add_executable(04_04-heron termin_04/04_heron.c)
