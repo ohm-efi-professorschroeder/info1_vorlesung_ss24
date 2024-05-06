@@ -33,3 +33,7 @@ add_executable(04_01-eingabePruefung termin_04/01_eingabePruefung.c)
 add_executable(04_02-binaerUmrechnungSchleife termin_04/02_binaerUmrechnungSchleife.c)
 add_executable(04_03-asciiTabelle termin_04/03_asciiTabelle.c)
 add_executable(04_04-heron termin_04/04_heron.c)
+
+add_executable(05_01-maexchen termin_05/01_maexchen.c)
+add_executable(05_02-wuerfeln termin_05/02_wuerfelspielMain.c termin_05/02_wuerfelspiel.c)
+add_executable(05_03-quadPlatten termin_05/03_quadPlatten.c)
