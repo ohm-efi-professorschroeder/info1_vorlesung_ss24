@@ -43,3 +43,7 @@ add_executable(06_02-reverseEngineering termin_06/02_reverseEngineering.c)
 add_executable(06_03-rotiere termin_06/03_rotiere.c)
 add_executable(06_04-wechselgeld termin_06/04_wechselgeld.c)
 add_executable(06_05_divisionMitRest termin_06/05_divisionMitRest.c)
+
+add_executable(07_01-roteriereArray termin_07/01_rotiereArray.c)
+add_executable(07_02-selectionSort termin_07/02_selectionsort.c)
+add_executable(07_03-mastermind termin_07/03_mastermind.c)

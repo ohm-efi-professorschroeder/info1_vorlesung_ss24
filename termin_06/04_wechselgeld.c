@@ -43,18 +43,33 @@
 
 double ermittlePreis()                      // Funktion 1
 {
-    // TODO
+    int min = MIN_PREIS_IN_EUROS * 100;
+    int max = MAX_PREIS_IN_EUROS * 100;
+    return (rand() % (max - min + 1) + min) / 100.f;
 }
 
 double wirfGeldEin(double preisInEuro)      // Funktion 2
 {
-    // TODO
+    double bezahlterBetraginEuro = 0;
+
+    printf("Bitte mindestens %lf Euros einwerfen!\n", preisInEuro);
+    while(scanf("%lf", &bezahlterBetraginEuro) != 1 || bezahlterBetraginEuro < preisInEuro)
+    {
+        printf("Bitte mindestens %lf Euros einwerfen!\n", preisInEuro);
+        while(getchar() != '\n'){}
+    }
+
+    return bezahlterBetraginEuro;
 }
 
 int errechneWechselgeld(double restBetrag, int* zweiEuros,
                         int* fuenfzigCent, int* zehnCent) // Funktion 3
 {
-    // TODO
+    *zweiEuros = restBetrag / 2;
+    *fuenfzigCent = (restBetrag - (*zweiEuros * 2)) / 0.5;
+    *zehnCent = (restBetrag - (*zweiEuros * 2) - (*fuenfzigCent * 0.5)) / 0.1;
+    double tmp = (restBetrag - (*zweiEuros * 2) - (*fuenfzigCent * 0.5)) - (*zehnCent * 0.1);
+    return tmp == 0;
 }
 
 
@@ -75,9 +90,10 @@ int main()
 
     printf("Sie haben %.2lf Euro bezahlt. Der Restbetrag von %.2lf wird nun ausgezahlt.\n", bezahlterBetragInEuro, restBetragInEuro);
 
-    /* TODO
-    istWechselGeldKomplett = errechneWechselgeld(// TODO: Argumente übergeben. Hier sollen u.a.die Anzahl an Münzen gesetzt werden.);
-    */
+    // TODO
+    // int errechneWechselgeld(double restBetrag, int* zweiEuros,
+    //                        int* fuenfzigCent, int* zehnCent)
+    istWechselGeldKomplett = errechneWechselgeld(restBetragInEuro, &zweiEuroMuenzen, &fuenzigCentMuenzen, &zehnCentMuenzen);
 
     printf("\nIhr Wechselgeld: %2dx 2-Euro-Muenzen, %2dx 50-Cent-Muenzen, %2dx 10-Cent-Muenzen.\n", zweiEuroMuenzen, fuenzigCentMuenzen, zehnCentMuenzen);
 
