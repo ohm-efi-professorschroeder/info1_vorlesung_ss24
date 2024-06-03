@@ -47,3 +47,7 @@ add_executable(06_05_divisionMitRest termin_06/05_divisionMitRest.c)
 add_executable(07_01-roteriereArray termin_07/01_rotiereArray.c)
 add_executable(07_02-selectionSort termin_07/02_selectionsort.c)
 add_executable(07_03-mastermind termin_07/03_mastermind.c)
+
+add_executable(07_01-noten termin_08/01_noten.c)
+add_executable(07_02-codeNachricht termin_08/02_codeNachricht.c)
+add_executable(07_03-sortiereMatrix termin_08/03_sortiereMatrix.c)

@@ -34,9 +34,81 @@
 
 #define MAX_ZAHLEN 100
 
-int main()
-{
-    
-    
+void liesZahlenEin(int zahlen[], int n) {
+    for(int i = 0; i < n; i++) {
+        printf("Gib die %d. Zahl ein: ", i+1);
+        while(scanf("%d", &zahlen[i]) != 1) {
+            printf("Fehlerhafte Eingabe!\n");
+            while(getchar() != '\n');
+        }
+    }
+}
+
+void printArray(int zahlen[], int anzahl) {
+    for(int i = 0; i < anzahl; i++) {
+        printf("%d ", zahlen[i]);
+    }
+}
+
+void tausche(int* pos1, int* pos2) {
+    int temp = *pos1;
+    *pos1 = *pos2;
+    *pos2 = temp;
+}
+
+void selectionSort(int zahlen[], int anzahl) {
+    for(int i = 0; i < anzahl-1; i++) {
+        int minIndex = i;
+        for(int j = i; j < anzahl; j++) {
+            if(zahlen[j] < zahlen[minIndex]) {
+                minIndex = j;
+            }
+        }
+        tausche(&zahlen[i], &zahlen[minIndex]);
+        printf("\nSortierung nach dem %d. Schritt: ", i+1);
+        printArray(zahlen, anzahl);
+    }
+}
+
+
+int main() {
+    int zahlen[MAX_ZAHLEN];
+    int n = 0;
+
+    printf("Wieviele Zahlen? ");
+    while(scanf("%d", &n) != 1 || n < 0) {
+        printf("Fehlerhafte Eingabe!\n");
+        while(getchar() != '\n');
+    }
+    while(getchar() != '\n');
+
+    liesZahlenEin(zahlen, n);
+
+    printArray(zahlen, n);
+    selectionSort(zahlen, n);
+
     return 0;
 }
+
+
+
+/*
+ *              | 5 3 _0_ 2
+ * 1. Schritt:  0 | 3 5 _2_
+ * 2. Schritt:  0 2 | 5 _3_
+ * 3. Schritt:  0 2 3 | 5
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
