@@ -48,6 +48,21 @@ add_executable(07_01-roteriereArray termin_07/01_rotiereArray.c)
 add_executable(07_02-selectionSort termin_07/02_selectionsort.c)
 add_executable(07_03-mastermind termin_07/03_mastermind.c)
 
-add_executable(07_01-noten termin_08/01_noten.c)
-add_executable(07_02-codeNachricht termin_08/02_codeNachricht.c)
-add_executable(07_03-sortiereMatrix termin_08/03_sortiereMatrix.c)
+add_executable(08_01-noten termin_08/01_noten.c)
+add_executable(08_02-codeNachricht termin_08/02_codeNachricht.c)
+add_executable(08_03-sortiereMatrix termin_08/03_sortiereMatrix.c)
+
+FILE(GLOB UtilSources termin_09/utils/*.c)
+add_executable(09_01-sortierungTest
+        termin_09/sortierung/sortierung.c
+        termin_09/sortierung/sortierungTest.c
+        ${UtilSources})
+add_executable(09_01-sortierungVergleich
+        termin_09/sortierung/sortierung.c
+        termin_09/sortierung/sortierungsvergleich.c
+        ${UtilSources})
+add_executable(09_01-suche
+        termin_09/suche/suche.c
+        termin_09/suche/sucheTest.c
+        termin_09/suche/zaehleVorkommen.c
+        ${UtilSources})
